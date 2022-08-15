@@ -149,10 +149,7 @@ def simulate_map(map, size):
             elif current_dir is Direction.down:
                 current_dir = Direction.right
         else:
-            if current_dir in [Direction.left, Direction.right]:
-                map_current[current_pos[0]][current_pos[1]] = '.'
-            elif current_dir in [Direction.up, Direction.down]:
-                map_current[current_pos[0]][current_pos[1]] = '.'
+            map_current[current_pos[0]][current_pos[1]] = '.'
 
     print_map(map_current, size)
 
@@ -169,7 +166,6 @@ if __name__ == '__main__':
     simulate_map(mapa, 10)
 
     mapa = generate_map_rand(10, 30, 30)
-    print_map(mapa, 10)
     simulate_map(mapa, 10)
 
 
