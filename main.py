@@ -108,10 +108,11 @@ def simulate_map(map, size):
     elif map[start_pos[0]][start_pos[1]] is choices.get(Direction.down):
         current_dir = Direction.down
 
-    print('Current dir: ' + str(current_dir))
     current_pos=list(start_pos)
 
     while 1:
+        print('Current dir: ' + str(current_dir))
+
         if current_dir is Direction.left:
             current_pos[1] -= 1
         elif current_dir is Direction.right:
@@ -167,7 +168,7 @@ if __name__ == '__main__':
     mapa = generate_map(10, Direction.down, (0, 2), mirrors_left=[(8, 7), (4, 2)], mirrors_right=[(2, 7), (8, 2)])
     simulate_map(mapa, 10)
 
-    mapa = generate_map_rand(10, 10, 10)
+    mapa = generate_map_rand(10, 30, 30)
     print_map(mapa, 10)
     simulate_map(mapa, 10)
 
